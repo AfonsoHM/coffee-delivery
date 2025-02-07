@@ -4,4 +4,3 @@ export const HomeContainer = styled.div`
   margin-bottom: 9.8rem;
 
 `
-
