@@ -5,6 +5,7 @@ export const CoffeeCardContainer = styled.div`
   background: ${(props) => props.theme.colors["base-card"]};
   border-radius: 6px 36px 6px 36px;
   padding: 1.25rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +60,7 @@ export const CardFooter = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
 `
 
@@ -78,5 +79,28 @@ export const Price = styled.div`
   strong{
     font-size: ${(props) => props.theme.textSizes["title-title-m"]};
     color: ${(props) => props.theme.colors["base-text"]};
+  }
+`
+
+export const AddCartWrapper = styled.div`
+  width: 7.5rem;
+  display: flex;
+
+  > button {
+    width: 2.375rem;
+    height: 2.375rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${(props) => props.theme.colors["brand-purple-dark"]};
+    color: ${(props) => props.theme.colors["base-card"]};
+    border-radius: 6px;
+    margin-left: 0.3rem;
+    transition: .4s;
+
+    &:hover {
+      background: ${(props) => props.theme.colors["brand-purple"]};
+    }
   }
 `
