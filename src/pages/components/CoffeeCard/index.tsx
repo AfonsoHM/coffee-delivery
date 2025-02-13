@@ -2,24 +2,41 @@ import { ShoppingCart } from "phosphor-react";
 import { QuantityInput } from "../../../components/QuantityInput";
 
 import { AddCartWrapper, CardFooter, CoffeeCardContainer, CoffeeDescription, CoffeeTitle, Price, Tags } from "./styles";
+import { formatMoney } from "../../../utils/formatMoney";
 
-export function CoffeeCard() {
+export interface Coffee {
+  id: number;
+  tags: string[];
+  name: string;
+  description: string;
+  photo: string;
+  price: number;
+}
+
+interface CoffeeProps {
+  coffee: Coffee;
+}
+
+export function CoffeeCard({coffee}: CoffeeProps) {
+  const formattedPrice = formatMoney(coffee.price)
+
   return(
     <CoffeeCardContainer>
-      <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/1314017-xicara-de-cafe-vista-de-cima-gratis-vetor.jpg" />
+      <img src={`/coffees/${coffee.photo}`} />
 
       <Tags>
-        <span>Tradicional</span>
-        <span>Com leite</span>
+      {coffee.tags.map((tag) => (
+          <span key={`${coffee.id}${tag}`}>{tag}</span>
+        ))}
       </Tags>
 
-      <CoffeeTitle>Expresso Tradicional</CoffeeTitle>
-      <CoffeeDescription>O tradicional café feito com água quente e grãos moídos</CoffeeDescription>
+      <CoffeeTitle>{coffee.name}</CoffeeTitle>
+      <CoffeeDescription>{coffee.description}</CoffeeDescription>
 
       <CardFooter>
         <Price>
           <span>R$</span>
-          <strong>9,90</strong>
+          <strong>{formattedPrice}</strong>
         </Price>
 
         <AddCartWrapper>
