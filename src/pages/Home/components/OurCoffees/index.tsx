@@ -1,5 +1,6 @@
-import { coffees } from "../../../data/coffees";
+import { coffees } from "../../../../data/coffees";
 import { CoffeeCard } from "../CoffeeCard";
+
 import { CoffeesList, OurCoffeesContainer } from "./styles";
 
 

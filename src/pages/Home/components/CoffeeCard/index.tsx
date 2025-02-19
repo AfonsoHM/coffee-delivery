@@ -1,8 +1,8 @@
 import { ShoppingCart } from "phosphor-react";
-import { QuantityInput } from "../../../components/QuantityInput";
+import { QuantityInput } from "../../../../components/QuantityInput";
 
 import { AddCartWrapper, CardFooter, CoffeeCardContainer, CoffeeDescription, CoffeeTitle, Price, Tags } from "./styles";
-import { formatMoney } from "../../../utils/formatMoney";
+import { formatMoney } from "../../../../utils/formatMoney";
 
 export interface Coffee {
   id: number;

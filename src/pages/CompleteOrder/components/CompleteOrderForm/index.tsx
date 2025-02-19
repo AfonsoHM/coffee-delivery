@@ -3,6 +3,7 @@ import { SectionTitle } from "../SectionTitle";
 import { CompleteOrderFormContainer, FormSectionContainer, Title } from "./styles";
 import { useTheme } from "styled-components";
 import { AddressForm } from "./AddressForm";
+import { PaymentMethodOptions } from "./PaymentMethodOptions";
 
 export function CompleteOrderForm() {
   const { colors} = useTheme()
@@ -30,7 +31,7 @@ export function CompleteOrderForm() {
           icon={<CurrencyDollar size={22} color={colors["brand-purple"]} />}
         />
 
-      
+        <PaymentMethodOptions />
       </FormSectionContainer>
     </CompleteOrderFormContainer>
   )
