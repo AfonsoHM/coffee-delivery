@@ -4,6 +4,7 @@ import { CompleteOrderFormContainer, FormSectionContainer, Title } from "./style
 import { useTheme } from "styled-components";
 import { AddressForm } from "./AddressForm";
 import { PaymentMethodOptions } from "./PaymentMethodOptions";
+import * as zod from 'zod'
 
 export function CompleteOrderForm() {
   const { colors} = useTheme()
