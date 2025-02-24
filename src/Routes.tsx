@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/Home";
 import { CompleteOrderPage } from "./pages/CompleteOrder";
 import { DefaultLayout } from "./layouts/DefaultLayout";
-import { OrderConfirmedPage } from "./pages/OrderConfirmed/indes";
+import { OrderConfirmedPage } from "./pages/OrderConfirmed";
 
 
 export function Router() {
